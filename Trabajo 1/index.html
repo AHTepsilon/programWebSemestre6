@@ -8,126 +8,143 @@
 </head>
 <body>
     <header>
-        <img src = "img/Logo.png" alt = "logo avianca">
+        <img src = "img/Logo.png" alt = "logo avianca" id = "mainLogo">
         <nav>
             <ul>
-                <li><a href = "">Colombia · COP - Español</a></li>
-                <li><a href = "">MyAvianca</a></li>
-                <li><a href = "">Ofertas de vuelos</a></li>
-                <li><a href = "">Mis viajes</a></li>
-                <li><a href = "">LifeMiles</a></li>
-                <li><button><img src = "./img/bell.png" alt = "notif. icon" width="30px"></button></li>
-                <li><a href = "">Ayuda</a></li>
-                <li><button><img src = "./img/menu.png" alt = "menu" width = "30px"></button></li>
+                <li><a href = "" id = "languageButton">Colombia · COP - Español</a></li>
+                <li><a href = "" id = "myAviancaButton">MyAvianca</a></li>
+                <li><a href = "" id = "salesButton">Ofertas de vuelos</a></li>|
+                <li><a href = "" id = "travlesButton">Mis viajes</a></li>
+                <li><a href = "" id = "lifeMilesButton">LifeMiles</a></li>
+                <li><button id = "notifButton"><img src = "./img/bell.png" alt = "notif. icon" width="30px"></button></li>
+                <li><a href = "" id = "helpButton">Ayuda</a></li>
+                <li><button id = "menuButton"><img src = "./img/menu.png" alt = "menu" width = "30px"></button></li>
             </ul>
         </nav>
     </header>
 
     <article>
-        <h1>¿Buscando a donde viajar?</h1>
-        <h2>Descubre nuevas rutas desde USD 115 por trayecto</h2>
-        <h3>A partir de marzo vuela a Ciudad de México directo desde Medellín y desde Cali</h3>
-        <a>COMPRA YA</a>
+        <h1 class = "mainTitle">¿Buscando a donde viajar?</h1>
+        <h2 class = "secondaryTitle">Descubre nuevas rutas desde USD 115 por trayecto</h2>
+        <h3 class = "tertiaryTitle">A partir de marzo vuela a Ciudad de México directo desde Medellín y desde Cali</h3>
+        <a href = "">COMPRA YA</a>
     </article>
 
     <article>
-        <a>Reserva tu vuelo</a>
-        <a>Gestiona tu reserva</a>
-        <a>Check-in Online</a>
-        <a>Estado de vuelos</a>
-        <a>Ascenso a Clase Ejecutiva</a>
+        <ul>
+            <li><a href = "" class = "mainOptHref" id = "bookButton">Reserva tu vuelo</a></li>
+            <li><a href = "" class = "mainOptHref" id = "manageButton">Gestiona tu reserva</a></li>
+            <li><a href = "" class = "mainOptHref" id = "checkInButton">Check-in Online</a></li>
+            <li><a href = "" class = "mainOptHref" id = "flightStateButton">Estado de vuelos</a></li>
+            <li><a href = "" class = "mainOptHref" id = "promotionButton">Ascenso a Clase Ejecutiva</a></li>
+        </ul>
     </article>
 
     <article>
-        <input type = "checkbox"> Ida y vuelta
-        <input type = "checkbox"> Solo ida
 
-        <button>Vuelo + Hotel</button>
-        <button>Hoteles</button>
-        <button>Alquiler de autos</button>
-        <button>Experiencias</button>
+        <form id = "bookForm">
+            <input type = "radio" id = "roundTripRadio"> Ida y vuelta
+            <input type = "radio" id = "oneWayRadio"> Solo ida
+    
+            <a href = "" class = "mainFormHl" id = "flightAndHotelHl">Vuelo + Hotel</a>
+            <a href = "" class = "mainFormHl" id = "hotelsHl">Hoteles</a>
+            <a href = "" class = "mainFormHl"  id = "rentCarsHl">Alquiler de autos</a>
+            <a href = "" class = "mainFormHl"  id = "experiencesHl">Experiencias</a>
+    
+            <input type = "text" placeholder= "Desde" id = "fromTF">
+            <input type = "text" placeholder= "Hacia" id = "toTF">
+            <input type = "date" placeholder= "Salida" id = "leavesDate">
+            <input type = "date" placeholder= "Vuelta" id = "returnsDate">
+            <input type = "number" placeholder= "Pasajeros" id = "passengersNumb">
 
-        <input type = "text" placeholder= "Desde">
-        <input type = "text" placeholder= "Hacia">
-        <input type = "date" placeholder= "Salida">
-        <input type = "date" placeholder= "Vuelta">
-        <input type = "number" placeholder= "Pasajeros">
+            <input type = "submit" placeholder= "Buscar Vuelos" id = "findFlightsSubmit">
+        </form>
+
     </article>
 
     <article>
-        <h4>¡Haz check-in 24 horas antes de tu vuelo! Elige tu asiento y obtén tu pasabordo sin filas en el aeropuerto.</h4>
-        <input type = "number" placeholder = "Número de reserva">
-        <p>Ej. 1AF5G8</p>
-        <input type = "text" placeholder = "Apellidos del pasajero">
-        <p>Ingresa tu(s) apellido(s) tal como aparece en la reserva</p>
-        <button>Continuar</button>
+        <form id = "checkInForm">
+            <h4>¡Haz check-in 24 horas antes de tu vuelo! Elige tu asiento y obtén tu pasabordo sin filas en el aeropuerto.</h4>
+            <input type = "number" placeholder = "Número de reserva" id = "reserveNumberId">
+            <p>Ej. 1AF5G8</p>
+            <input type = "text" placeholder = "Apellidos del pasajero" id = "passengersLastNameId">
+            <p>Ingresa tu(s) apellido(s) tal como aparece en la reserva</p>
+            <input type = "submit" placeholder= "Buscar Vuelos" id = "continueSubmit">
+        </form>
     </article>
 
     <article>
-        <h3>¡Consulta tu reserva fácil y rápido!</h3>
-        <h4>Si necesitas hacer un cambio de vuelo o quieres comprar un servicio adicional, hazlo ingresando el código de reserva y tu apellido.</h4>
-
-        <input type = "text" placeholder = "Usar mi código de reserva">
-        <p>Debe ser alfanumérico. Ejemplo: AAA000</p>
-        <input type = "text" placeholder = "Apellido">
-        <p>Ingresa tu(s) apellido(s) como aparece en la reserva</p>
-        <p><b>Fecha de salida del vuelo</b></p>
-        <input type = "date">
-        <button>Continuar</button>
+        <form id = "consultationForm">
+            <h3>¡Consulta tu reserva fácil y rápido!</h3>
+            <h4>Si necesitas hacer un cambio de vuelo o quieres comprar un servicio adicional, hazlo ingresando el código de reserva y tu apellido.</h4>
+    
+            <input type = "text" placeholder = "Usar mi código de reserva" id = "reservationCode">
+            <p>Debe ser alfanumérico. Ejemplo: AAA000</p>
+            <input type = "text" placeholder = "Apellido" id = "passengersLastName2">
+            <p>Ingresa tu(s) apellido(s) como aparece en la reserva</p>
+            <p><b>Fecha de salida del vuelo</b></p>
+            <input type = "date" id = "flightDate">
+            
+        </form>
         
     </article>
 
     <article>
         <h3>Consulta en tiempo real la hora de salida y llegada de tus vuelos. También conoce los cambios operacionales en nuestros itinerarios.</h3>
-        <input type = "checkbox"> Ruta
-        <input type = "checkbox"> Número de vuelos
 
-        <input type = "text" placeholder = "Origen">
-        <input type = "text" placeholder = "Destino">
-        <p><b>Fecha de salida del vuelo</b></p>
-        <input type = "date">
-        <button>Continuar</button> <br>
-
-        <input type = "number" placeholder = "Número de vuelo">
-        <p>Ej. 1AF5G8</p>
-        <input type = "text" placeholder = "Primer apellido">
-        <p>Apellido</p>
-        <button>Continuar</button>
+        <form id = "flightStateForm">
+            <input type = "radio" id = "routeRadio"> Ruta
+            <input type = "radio" id = "flightRadio"> Número de vuelos
+    
+            <input type = "text" placeholder = "Origen" id = "originPlaceText">
+            <input type = "text" placeholder = "Destino" id = "arrivalPlaceText">
+            <p><b>Fecha de salida del vuelo</b></p>
+            <input type = "date" id = "flightLeavesDate">
+            <input type = "submit" placeholder = "Continuar" id = "continueSubmit3_1">
+    
+            <input type = "number" placeholder = "Número de vuelo">
+            <p>Ej. 1AF5G8</p>
+            <input type = "text" placeholder = "Primer apellido">
+            <p>Apellido</p>
+            <input type = "submit" placeholder = "Continuar" id = "continueSubmit3_2">
+        </form>
     </article>
 
     <article>
-        <input type = "number" placeholder = "Número de vuelo">
-        <p><b>Fecha de salida del vuelo</b></p>
-        <input type = "date">
-        <button>¡Quiero ascender!</button>
+        <form action="" id = "promotionToExecForm">
+            <input type = "number" placeholder = "Número de vuelo" id = "flightNum">
+            <p><b>Fecha de salida del vuelo</b></p>
+            <input type = "date" id = "flightDate1">
+            <input type = "submit" placeholder = "¡Quiero Ascender!" id = "promotionSubmit">
+        </form>
     </article>
 
     <article>
         <h2>Vuelos baratos desde <a href = "">Barranquilla</a></h2>
         <h4>Apresúrate y compra hasta el 31 de enero de 2022</h4>
 
-        <div>
+        <div class = "cheapFlightsDiv" id = "medellinFlightsDiv">
             <img src = "img/medel.jpg" alt = "foto medellin">
             <p>Vuelos a <b>Medellín</b></p>
             <h4>Por trayecto desde</h4>
             <h2>COP 124.500</h2>
         </div>
 
-        <div>
+        <div class = "cheapFlightsDiv" id = "miamiFlightsDiv">
             <img src = "img/miam.jpg" alt = "foto miami">
             <p>Vuelos a <b>Miami</b></p>
             <h4>Por trayecto desde</h4>
             <h2>USD 131</h2>
         </div>
 
-        <div>
+        <div class = "cheapFlightsDiv" id = "bogotaFlightsDiv">
             <img src = "img/bogot.jpg" alt = "foto bogota">
             <p>Vuelos a <b>Bogotá</b></p>
             <h4>Por trayecto desde</h4>
             <h2>COP 134.300</h2>
         </div>
 
-        <button>Ver más ofertas</button>
+        <a href = "">Ver más ofertas</a>
 
     </article>
 
@@ -135,25 +152,25 @@
         <h2>Todo lo que necesitas saber sobre el COVID-19</h2>
         <h4>Revisa todos los requisitos exigidos para tu viaje, sigue las recomendaciones y conoce nuestras políticas de flexibilidad.</h4>
 
-        <div>
+        <div class = "informationDiv" id = "flightRestrictionsDiv">
             <img src = "img/Banner-secundario-parajero-tapabocas-v4.jpg" alt = "tapabocas">
             <h3>Restricciones de viaje</h3>
             <p>La información proporcionada puede variar de acuerdo a las leyes gubernamentales de cada país. Recuerda que debes consultar los sitios web oficiales de cada gobierno para revisar y confirmar los requisitos de ingreso.</p>
-            <button>Conoce más</button>
+            <a href = "">Conoce más</a>
         </div>
 
-        <div>
+        <div class = "informationDiv" id = "securityCommendsDiv">
             <img src = "img/banner-secundario-pasajero-10-wom1.jpg" alt = "avion-interior-pasajero">
             <h3>Viaja seguro y con tranquilidad</h3>
             <p>Sigue nuestras recomendaciones de bioseguridad antes, durante y después de tu vuelo para que estés tranquilo en todo tu viaje.</p>
-            <button>Conoce nuestros protocolos</button>
+            <a href = "">Conoce nuestros protocolos</a>
         </div>
 
-        <div>
+        <div class = "informationDiv" id = "flightFlexiDiv">
             <img src = "img/Banner-secundario-vuelo-china-02.jpg" alt = "avion">
             <h3>Flexibilidad para vuelos</h3>
             <p>¡Pensamos en ti! Por eso, te damos la mayor flexibilidad en tus vuelos para que los gestiones sin ninguna complicación.</p>
-            <button>Revisa las políticas</button>
+            <a href = "">Revisa las políticas</a>
         </div>
 
     </article>
@@ -162,60 +179,60 @@
         <h2>Te contamos lo que pasa en avianca.com</h2>
         <h4>Disfruta nuevos productos y servicios.</h4>
 
-        <div>
+        <div class = "informationDiv" id = "changeFlightsInfoDiv">
             <img src = "img/banner-secundario-cambio-de-viaje-v3.jpg" alt = "cambio-de-viaje">
             <h3>Cambiar tus vuelos es muy fácil</h3>
             <p>Tú mismo puedes reprogramar y ajustar tus viajes de forma fácil y rápida.</p>
-            <button>Gestiona tu reserva</button>
+            <a href = "">Gestiona tu reserva</a>
         </div>
 
-        <div>
+        <div class = "informationDiv" id = "elitePointsDiv">
             <img src = "img/banner-secundario-hombre-mirando-celular.jpg" alt = "hombre mirando celular">
             <h3>Llega Elite Points, una nueva forma para personalizar tus premios Elite.</h3>
             <p>Utiliza tus Elite Points para acceder a cualquiera de estos tres premios Elite: Accesos a Avianca Lounges, Ascensos de Cabina y Selección de silla preferencial.</p>
-            <button>Conoce más</button>
+            <a href = "">Conoce más</a>
         </div>
 
-        <div>
+        <div class = "informationDiv" id = "aviancaAppDiv">
             <img src = "img/banner-secundario-myavianca-app-marzo-hombre-eng.jpg" alt = "hombre">
             <h3>¡Nueva aplicación de Avianca!</h3>
             <p>¡Reserva y gestiona tu vuelos desde tu móvil mientras disfrutas de un diseño renovado, más rapido y más sencillo.</p>
-            <button>Conoce más</button>
+            <a href = "">Conoce más</a>
         </div>
     </article>
     
     <article>
         <h3>Vuelos baratos</h3>
         <ul>
-            <li><button>Vuelos nacionales</button></li>
-            <li><button>Vuelos a Cali</button></li>
-            <li><button>Vuelos a Santa Marta</button></li>
-            <li><button>Vuelos Ciudad de México</button></li>
-            <li><button>Vuelos Nueva York</button></li>
+            <li><a href = "">Vuelos nacionales</a></li>
+            <li><a href = "">Vuelos a Cali</a></li>
+            <li><a href = "">Vuelos a Santa Marta</a></li>
+            <li><a href = "">Vuelos Ciudad de México</a></li>
+            <li><a href = "">Vuelos Nueva York</a></li>
         </ul>
         <h3>Servicios</h3>
         <ul>
-            <li><button>Ofertas de hoteles</button></li>
-            <li><button>Alquiler de carros</button></li>
-            <li><button>Avianca Tours</button></li>
-            <li><button>Equipaje adicional</button></li>
-            <li><button>Asistencia de viaje</button></li>
+            <li><a href = "">Ofertas de hoteles</a></li>
+            <li><a href = "">Alquiler de carros</a></li>
+            <li><a href = "">Avianca Tours</a></li>
+            <li><a href = "">Equipaje adicional</a></li>
+            <li><a href = "">Asistencia de viaje</a></li>
         </ul>
         <h3>Acerca de</h3>
         <ul>
-            <li><button>Nosotros</button></li>
-            <li><button>Alianza y beneficios</button></li>
-            <li><button>AviancaDirect</button></li>
-            <li><button>Red de servicios</button></li>
-            <li><button>Inversionistas</button></li>
+            <li><a href = "">Nosotros</a></li>
+            <li><a href = "">Alianza y beneficios</a></li>
+            <li><a href = "">AviancaDirect</a></li>
+            <li><a href = "">Red de servicios</a></li>
+            <li><a href = "">Inversionistas</a></li>
         </ul>
         <h3>Enlaces útiles</h3>
         <ul>
-            <li><button>COVID-19</button></li>
-            <li><button>Check-in online</button></li>
-            <li><button>Cambia tu vuelo</button></li>
-            <li><button>Estado de vuelo</button></li>
-            <li><button>Solicita un reembolso</button></li>
+            <li><a href = "">COVID-19</a></li>
+            <li><a href = "">Check-in online</a></li>
+            <li><a href = "">Cambia tu vuelo</a></li>
+            <li><a href = "">Estado de vuelo</a></li>
+            <li><a href = "">Solicita un reembolso</a></li>
         </ul>
     </article>
 
@@ -232,14 +249,14 @@
             | 
             <a href = "">Contrato de transporte</a></p>
 
-            <button><img src = "img/icono-star-alliance-member.svg" alt = "star alliance logo"></button>
-            <button><img src = "img/logo-super-transporte.png" alt = "super transporte logo"></button>
-            <button><img src = "img/logo-aeronautica-v2.png" alt = "aeronautica logo"></button>
-            <button><img src = "img/icono-facebook.svg" alt = "facbook logo"></button>
-            <button><img src = "img/icono-instagram.svg" alt = "instagram logo"></button>
-            <button><img src = "img/icono-youtube.svg" alt = "youtube logo"></button>
-            <button><img src = "img/icono-twitter.svg" alt = "twitter logo"></button>
-            <button><img src = "img/avianca-main.png" alt = "servicio al cliente icon"></button>
+            <a><img src = "img/icono-star-alliance-member.svg" alt = "star alliance logo"></a>
+            <a><img src = "img/logo-super-transporte.png" alt = "super transporte logo"></a>
+            <a><img src = "img/logo-aeronautica-v2.png" alt = "aeronautica logo"></a>
+            <a><img src = "img/icono-facebook.svg" alt = "facbook logo"></a>
+            <a><img src = "img/icono-instagram.svg" alt = "instagram logo"></a>
+            <a><img src = "img/icono-youtube.svg" alt = "youtube logo"></a>
+            <a><img src = "img/icono-twitter.svg" alt = "twitter logo"></a>
+            <a><img src = "img/avianca-main.png" alt = "servicio al cliente icon"></a>
     </footer>
 </body>
 </html>
